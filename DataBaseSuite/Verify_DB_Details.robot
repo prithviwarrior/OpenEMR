@@ -19,3 +19,12 @@ TC1_DB
 TC2_Update
     Execute Sql String    update country set name='aruba2' where name='aruba1'    
     Check If Exists In Database    SELECT * FROM country WHERE name='aruba2'  
+    
+TC3_CheckData
+    ${output}    Query    SELECT * FROM country    
+    Log To Console    ${output}    
+    Log To Console    ${output}[0]    
+    Log To Console    ${output}[0][0]    
+    
+
+
